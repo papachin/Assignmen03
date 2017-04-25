@@ -1,0 +1,31 @@
+<%= @user.name %>, <%= @user.email %>
+<% provide(:title, @user.name) %>
+
+<div class="row">
+  <aside class="col-md-4">
+    
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+    </section>
+    
+    <section class="user_data">
+      <h2>
+        <%= @user.name %> Information
+      </h2>
+      <h3>Courses</h3>
+      <p>
+        •Year 1: Business Information Systems, Computer Hardware, Computer Programming, Client Side Web Development, Effective Learning and Development, Foundations of Computing, Systems Software, Data Structures & Algorithms
+      </p><p>
+        •Year 2: Linear Algebra, Operating System Design, Server Side Web Development, Object Oriented Programming, Probability & Statistics, Relational Databases, Systems Analysis & Design
+      </p><p>
+        •Year 3: HCI & GUI Programming, Introduction to Formal Design, Networks & Data Communications, Programming Paradigms, Work Placement
+      </p><p>
+        •Year 4 Concurrent Programming, Managing Big Data, Advanced Network Theory, Distributed Systems, Emerging Technologies, Web Frameworks, Formal Specifications.
+      </p>
+    </section>
+    
+  </aside>
+</div>
