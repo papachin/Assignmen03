@@ -36,7 +36,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt'
 
 # editor
-gem "ckeditor", :git => "git@github.com:galetahub/ckeditor.git"
+gem 'ckeditor', '4.1.3'
 gem "paperclip"
 gem "contact_us"
 gem "formtastic"
