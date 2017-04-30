@@ -40,6 +40,7 @@ gem 'ckeditor', '4.1.3'
 gem "paperclip"
 gem "contact_us"
 gem "formtastic"
+gem 'rails_12factor', group: :production
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -72,7 +73,6 @@ end
 
 group :production do 
   gem 'pg'         #gem to use in production environment
-  gem 'rails_12factor'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
