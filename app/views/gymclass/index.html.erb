@@ -1,0 +1,19 @@
+<% provide(:title, "Manage Classes") %>
+
+<h1>Manage Classes</h1>
+
+<%= link_to "New Class", new_gymclass_path %>
+
+<% @gym_class.each do |gymclass| %>
+  
+  <h3><%= gymclass.classname.html_safe gymclass.instructor.html_safe %></h3>
+  
+  <%= link_to "Edit", edit_gymclass_path(gymclass) %>
+  | <%= link_to "Delete", gymclass, method: :delete, data: { confirm: "You sure you want to delete this Class?" } %>
+
+
+  <% if gymclass != @gym_class.last %>
+  <hr />
+  <% end %>
+
+<% end %>

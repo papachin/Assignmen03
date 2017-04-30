@@ -1,0 +1,10 @@
+<% provide(:title, @article.title.html_safe) %>
+<div class="center jumbotron">
+  <h1>
+    <%= @article.title.html_safe %>
+  </h1>
+  
+  <div class="row">
+        <p><%= @article.body.html_safe %></p>
+  </div>
+</div>

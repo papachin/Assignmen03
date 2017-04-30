@@ -1,0 +1,24 @@
+<% provide(:title, "Classes") %>
+<div class="center jumbotron">
+<h1>Classes</h1>
+      <table class="table">                    
+            <tr>                          
+                <th align="center">Class Name</th>
+                <th align="center">Day</th>
+                <th align="center">Time</th>
+                <th align="center">Instructor</th>
+                <th align="center">Start Date</th>
+            </tr>
+        
+            <% @gymclass = GymClass.all %>
+            <% @gymclass.each do |data| %>
+            <tr>
+                  <td><%= data.classname %></td>
+                  <td><%= data.day %></td>
+                  <td><%= data.time %></td>
+                  <td><%= data.instructor %></td>
+                  <td><%= data.startdate %></td>
+            </tr>
+            <% end %>
+      </table>
+</div>

@@ -35,6 +35,12 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
 
+# editor
+gem "ckeditor", :git => "git@github.com:galetahub/ckeditor.git"
+gem "paperclip"
+gem "contact_us"
+gem "formtastic"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

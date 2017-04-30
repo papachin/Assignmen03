@@ -3,7 +3,8 @@
 
 /* mixins, variables, etc. */
 $gray-medium-light: #D2D2D2;
-$nav-color: #38063f;
+$nav-color: #8B0000;
+
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -15,16 +16,19 @@ $nav-color: #38063f;
 /* universal */
 body {
   padding-top: 80px;
+  background-color:black;
+  opacity:0.9;
 }
-
 section {
   overflow: auto;
 }
-
 textarea {
   resize: vertical;
 }
-
+picture {
+    float: left;
+ 
+}
 .center {
   text-align: center;
   h1 {
@@ -32,21 +36,18 @@ textarea {
   }
 }
 
-
 /* typography */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
-
 h1 {
-  font-size: 3em;
+  font-size: 5em;
   letter-spacing: 1px;
   margin-bottom: 30px;
   text-align: center;
 }
-
 h2 {
-  font-size: 1.5em;
+  font-size: 3em;
   letter-spacing: 1px;
   margin-bottom: 30px;
   text-align: center;
@@ -55,14 +56,19 @@ h2 {
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1.5em;
   line-height: 1.7em;
+}
+
+table,thead,tr,tbody,th,td {
+  text-align: center;
 }
 
 
 /* header */
 .navbar {
-  background-color: $nav-color;
+   color: white;
+   font-weight: bold;
 }
 .nav {
   test-color: white;
@@ -71,7 +77,6 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  background-color: $nav-color;
   color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
@@ -208,4 +213,3 @@ input {
   margin-top: 45px;
   @include box_sizing;
 }
-

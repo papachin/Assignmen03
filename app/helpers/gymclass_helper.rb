@@ -1,0 +1,2 @@
+module GymclassHelper
+end

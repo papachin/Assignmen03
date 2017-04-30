@@ -12,11 +12,15 @@
       <ul class="nav navbar-nav navbar-right">
         
         <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Help", help_path %></li>
-        
-        <% if logged_in? %>
+        <li><%= link_to "Membership", membership_path %></li>
+        <li><%= link_to "Classes", classes_path %></li>
           
-          <li><%= link_to "Users", users_path if admin? %></li>
+        <% @articles = Article.all %>
+        <% @articles.each do |article| %>
+          <li><%= link_to article.title.html_safe, article %></li>
+        <% end %>
+          
+        <% if logged_in? %>
           
           <li class="dropdown">
             
@@ -25,16 +29,17 @@
             </a>
             
             <ul class="dropdown-menu">
-              <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+              <li><%= link_to "Edit Classes", gym_class_index_path if admin? %></li>
+              <li><%= link_to "Edit Pages", articles_path if admin? %></li>
+              <li><%= link_to "Edit Admin", edit_user_path(current_user) %></li>
               
               <li class="divider"></li>
-              
-              <li>
-                <%= link_to "Log Out", logout_path, method: "delete" %>
-              </li>
+              <li><%= link_to "Log Out", logout_path, method: "delete" %></li>
             </ul>
-            
+          </li>
+          
+         <li>
+            <%= link_to "Log Out", logout_path, method: "delete" %>
           </li>
           
         <% else %>
